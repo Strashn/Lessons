@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200..700&display=swap');
+
+@import url("fonts.css");
+
+@import url(reset.css);
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: rgb(64, 61, 61);
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: navy;
+    line-height: 1.5;
+    word-spacing: 1px;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: navy;
+    line-height: 1.5;
+}
+
+.start p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    color: navy;
+    line-height: 2;
+}
+
+.important {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    line-height: 1.5;
+}
+
+/* Макет Krovato */
+
+.krovato {
+    font-family: "ProximaNovaRegular", sans-serif;
+    color: #2b2929;
+    /* font-style: normal; */
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 40px;
+    line-height: 2;
+    text-transform: uppercase;
+    text-shadow: -5px 5px 3px rgba(17, 14, 42, 0.5);
+    text-align: center;
+}
+
+h4 {
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.krovato span {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.krovato p,
+.krovato li {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+}
+
+footer p {
+    text-transform: uppercase;
+    text-shadow: 3px -3px 2px rgba(17, 14, 42, 0.5);
+}
+
+footer a {
+    color: orange;
+    letter-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+.footer {
+    line-height: 2;
+    text-align: center;
+}
