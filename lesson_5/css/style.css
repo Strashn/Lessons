@@ -26,7 +26,7 @@ main {
 }
 
 .living-room-container {
-    margin: 0 425px 100px;
+    margin: 0 425px 0;
 }
 
 h1 {
@@ -100,6 +100,7 @@ h2 {
 
 .item {
     width: 25%;
+    min-width: 300px;
     display: inline-block;
     vertical-align: top;
     padding-left: 15px;
@@ -123,6 +124,7 @@ h2 {
 }
 
 .collections {
+    color: #000;
     margin-bottom: 100px;
 }
 
@@ -159,6 +161,7 @@ h4 {
 .product {
     display: inline-block;
     width: 16.66%;
+    min-width: 200px;
     padding-left: 12px;
     padding-right: 12px;
 }
