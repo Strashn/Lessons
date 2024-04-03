@@ -39,7 +39,7 @@ h1 {
 }
 
 .units li:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .units span {
