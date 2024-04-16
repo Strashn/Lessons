@@ -1,0 +1,266 @@
+@import url("fonts.css");
+
+@import url("reset.css");
+
+body {
+    font-family: "ProximaNova", sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+/* Header */
+
+.header__container {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.header__menu,
+.header__krovato {
+    padding: 28px 0;
+}
+
+.header__img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header__title {
+    display: inline-block;
+    font-size: 44px;
+    font-weight: 600;
+    vertical-align: middle;
+    padding-left: 20%;
+}
+
+/* Kroato */
+
+.krovato__logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 36px;
+}
+
+.catalog {
+    max-width: 300px;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.button {
+    vertical-align: middle;
+    font-size: 19px;
+    line-height: 1.26;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ffbc57;
+    border-radius: 8px;
+    padding: 11px 20px 11px 20px;
+}
+
+.button:hover {
+    background-color: #fb9900;
+}
+
+.button::before {
+    content: "";
+    vertical-align: top;
+    background: url("../img/menu.png") 0 0 / 100% no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.button:hover::before {
+    background: url("../img/x.png") 0 0 / 100% no-repeat;
+}
+
+.catalog__list {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px 0 0 8px;
+    padding: 8px 0 8px;
+    position: absolute;
+    left: -284px;
+    top: 170%;
+    z-index: 2;
+    display: none;
+}
+
+.catalog__list:target {
+    display: block;
+}
+
+.catalog__link {
+    max-width: 300px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #2b2929;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.catalog__link::after {
+    content: "";
+    background: url("../img/arrow-orange.png") 0 0 / 100% no-repeat;
+    width: 8px;
+    height: 12px;
+    margin-right: 15px;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+}
+
+.catalog__item:hover {
+    background-color: #ffbc57;
+}
+
+.catalog__item:hover .catalog__link::after {
+    background: url("../img/arrow-black.png") 0 0 / 100% no-repeat;
+}
+
+.catalog__img {
+    max-width: 40px;
+    width: 100%;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.catalog__sub-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sub-menu {
+    min-width: 323px;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    left: 100%;
+    display: none;
+    border-radius: 0 8px 8px 0;
+    padding: 20px 20px 20px 35px;
+    border-left: 5px solid #ffbc57;
+}
+
+.catalog__item:hover .sub-menu {
+    display: block;
+    height: 100%;
+}
+
+.sub-menu__link {
+    font-size: 19px;
+    line-height: 2.1;
+}
+
+.sub-menu__link:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+
+.main {
+    padding: 160px 0;
+}
+
+.main__container {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.main__title {
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.main__title--margin {
+    margin-bottom: 40px;
+}
+
+.card {
+    font-size: 0;
+}
+
+.card__block {
+    display: inline-block;
+    width: 250px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: -3px 4px 15px 0 rgba(0, 0, 0, .06);
+}
+
+.card__block:not(:last-child) {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.card__block:hover {
+    box-shadow: -3px 4px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card__link::after {
+    content: "";
+    background: url("../img/arrow.svg") 0 0 / 100% no-repeat;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.card__title {
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    position: absolute;
+}
+
+.card__number {
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #b1b1b1;
+    position: absolute;
+}
+
+/* Footer */
+
+.footer {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer p {
+    text-transform: uppercase;
+    word-spacing: 5px;
+    padding: 10px;
+}
+
+.footere__link {
+    /* max-width: 200px; */
+    background-color: darkgoldenrod;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.footer__link:hover {
+    background-color: rgb(212, 173, 74);
+    margin-top: 3px;
+    border-radius: 20px;
+}
