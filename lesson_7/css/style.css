@@ -1,0 +1,525 @@
+        @import url("https://fonts.googleapis.com/css?family=Exo:400,700&display=swap");
+
+        @import url("https://fonts.googleapis.com/css?family=Orbitron:500&display=swap");
+
+        @import url("fonts.css");
+
+        @import url("reset.css");
+
+        body {
+            font-family: "ProximaNova", sans-serif;
+        }
+
+        main {
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header__body {
+            background-color: #a2a0a0;
+            margin-bottom: 100px;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header {
+            padding: 32px 0;
+        }
+
+        .logo {
+            border-radius: 24px 0;
+            padding-right: 15%;
+        }
+
+        nav {
+            display: inline-block;
+            vertical-align: middle;
+            padding-top: 36px;
+        }
+
+        .items li {
+            display: inline-block;
+            margin-right: 60px;
+            padding-bottom: 10px;
+        }
+
+        .item,
+        .vis {
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #2b2929;
+            padding: 12px 20px;
+            border-radius: 12px 0;
+            background-color: #fedd00;
+        }
+
+        .item:hover {
+            background-color: rgb(124, 122, 108);
+        }
+
+        .item:active {
+            background-color: green;
+            color: #fff;
+        }
+
+        .hid {
+            font-weight: 600;
+            color: #2b2929;
+            padding: 12px 20px;
+            border-radius: 12px 0;
+            background-color: #fff;
+        }
+
+        .test .hid {
+            display: none;
+        }
+
+        .test:hover .hid {
+            display: block;
+        }
+
+        .test:hover .vis {
+            display: none;
+            background-color: #fff;
+        }
+
+        .test li {
+            margin-right: 0;
+        }
+
+        /* KROVATO Вітальня */
+
+        .vgoru {
+            font-size: 12px;
+            font-weight: 600;
+            padding-top: 10px;
+        }
+
+        .living-room {
+            font-family: "ProximaNova", sans-serif;
+            padding: 40px 0;
+        }
+
+        .living-room-container {
+            max-width: 1070px;
+            margin: 0 auto;
+
+        }
+
+        .living-room-container>* {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-shadow: -5px 5px 3px rgba(17, 14, 42, 0.5);
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .living-room-container h2 {
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .room img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .room-text p {
+            line-height: 1.875;
+        }
+
+        .room-text p:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .room-title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 28px;
+        }
+
+        .room-items li {
+            line-height: 1.875;
+            min-height: 32px;
+        }
+
+        .room-items li::before {
+            content: "";
+            background: url("../img/icon.svg") no-repeat;
+            vertical-align: top;
+            width: 27px;
+            height: 27px;
+            margin-right: 17px;
+        }
+
+        .room-items li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        /* Video Alchemist */
+        /* About me */
+        .about {
+            font-family: "Exo", serif;
+            color: #fff;
+            background-color: #000;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 2.2;
+            letter-spacing: -1px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .about-body {
+            padding: 120px 0;
+        }
+
+        .about-container {
+            max-width: 1104px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            max-width: 992px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.16;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .about-title::after {
+            content: "";
+            max-width: 120%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(250, 0, 2, 1) 0%, rgba(6, 241, 21, 1) 50%, rgba(0, 1, 255, 1) 100%);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .about_menu {
+            font-family: "Orbitron", serif;
+            margin: 40px 0;
+        }
+
+        .about-items {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .about-item {
+            display: inline-block;
+            padding-left: 60px;
+        }
+
+        .about-item::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, rgba(250, 23, 2, 1) 0%, rgba(6, 241, 21, 1) 50%, rgba(0, 1, 255, 1) 100%);
+            vertical-align: top;
+            margin-left: 60px;
+        }
+
+        /* Contacts */
+        .about-contacts {
+            padding: 160px 0 110px;
+        }
+
+        .contacts-container {
+            max-width: 959px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            max-width: 963px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .contact {
+            display: inline-block;
+            font-size: 20px;
+            letter-spacing: -1px;
+            padding-right: 80px;
+            text-transform: capitalize;
+        }
+
+        .contact::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .call::before {
+            background: url("../img/call.svg") 0 0 / 20px no-repeat;
+        }
+
+        .location::before {
+            background: url("../img/location.svg") 0 0 / 20px no-repeat;
+        }
+
+        .email::before {
+            background: url("../img/email.svg") 0 5px / 20px no-repeat;
+        }
+
+        .vgoru-white {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            padding-top: 40px;
+        }
+
+        /*Гра */
+
+        .game {
+            color: #ece43f;
+            background: url("../img/starry-sky.webp") 0 0 / cover no-repeat;
+            cursor: url("../img/enterprise.png"), auto;
+        }
+
+        .game-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        h5 {
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .start {
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .start-btn {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff000;
+            padding: 8px 20px;
+            background-color: rgb(131, 129, 129);
+            border-radius: 16px;
+            letter-spacing: 2px;
+        }
+
+        .game-field {
+            width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+
+        .jupiter {
+            width: 150px;
+            margin-left: -50px;
+            margin-top: -5px;
+        }
+
+        .trek {
+            display: inline-block;
+            background-color: #ece43f;
+            font-size: 0;
+        }
+
+        .trek-1 {
+            width: 50px;
+            height: 150px;
+            margin-top: 850px;
+            margin-left: 0px;
+            visibility: visible;
+        }
+
+        .trek-2 {
+            width: 150px;
+            height: 50px;
+            margin-bottom: 100px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .trek-3 {
+            width: 50px;
+            height: 150px;
+            margin-bottom: 100px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .trek-4 {
+            width: 150px;
+            height: 50px;
+            margin-bottom: 200px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .trek-5 {
+            width: 50px;
+            height: 450px;
+            margin-bottom: 200px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .trek-6 {
+            width: 100px;
+            height: 50px;
+            margin-bottom: 600px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .trek-7 {
+            width: 50px;
+            height: 550px;
+            margin-bottom: 100px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .trek-8 {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 100px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .trek-9 {
+            width: 50px;
+            height: 750px;
+            margin-bottom: 100px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .trek-10 {
+            width: 150px;
+            height: 50px;
+            margin-bottom: 800px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .earth {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin-top: 100px;
+            margin-left: -5px;
+            visibility: hidden;
+        }
+
+        .trek-1:hover+.trek-2,
+        .trek-2:hover {
+            visibility: visible;
+        }
+
+        .trek-2:hover+.trek-3,
+        .trek-3:hover {
+            visibility: visible;
+        }
+
+        .trek-3:hover+.trek-4,
+        .trek-4:hover {
+            visibility: visible;
+        }
+
+        .trek-4:hover+.trek-5,
+        .trek-5:hover {
+            visibility: visible;
+        }
+
+        .trek-5:hover+.trek-6,
+        .trek-6:hover {
+            visibility: visible;
+        }
+
+        .trek-6:hover+.trek-7,
+        .trek-7:hover {
+            visibility: visible;
+        }
+
+        .trek-7:hover+.trek-8,
+        .trek-8:hover {
+            visibility: visible;
+        }
+
+        .trek-8:hover+.trek-9,
+        .trek-9:hover {
+            visibility: visible;
+        }
+
+        .trek-9:hover+.trek-10,
+        .trek-10:hover {
+            visibility: visible;
+        }
+
+        .trek-10:hover+.earth,
+        .earth:hover {
+            visibility: visible;
+        }
+
+        .up {
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        /* Footer */
+
+        .footer {
+            max-width: 200px;
+            margin: 0 auto;
+            padding: 20px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .footer p {
+            text-transform: uppercase;
+            word-spacing: 5px;
+            padding: 10px;
+        }
+
+        .link {
+            max-width: 200px;
+            background-color: darkgoldenrod;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 5px 0px rgba(0, 0, 0, 1);
+        }
+
+        .link:hover {
+            background-color: rgb(212, 173, 74);
+            margin-top: 3px;
+            box-shadow: 0 2px 0px rgba(0, 0, 0, 1);
+            opacity: 0.8;
+        }
+
+        .link:active {
+            outline: 2px dashed green;
+        }
