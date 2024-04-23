@@ -1,0 +1,775 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+@import url("reset.css");
+
+body {
+    font-family: "Montserrat", serif;
+    background-color: #d4d2cf;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: auto;
+}
+
+.header__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.header__logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30%;
+}
+
+.header__title {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 600;
+    vertical-align: middle;
+    color: rgb(13, 13, 57);
+}
+
+.main__container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.main__trip {
+    width: 100%;
+}
+
+.gdansk {
+    width: 1920px;
+    min-width: 100%;
+    height: 400px;
+    opacity: 0;
+    animation: screen 2s linear 1 4.5s forwards;
+}
+
+@keyframes screen {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.trip__start {
+    width: 480px;
+    height: 540px;
+    position: relative;
+}
+
+.trip__fridge {
+    width: 360px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: exit 0.5s linear 1 4.5s forwards;
+}
+
+@keyframes exit {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(0) rotate(720deg);
+    }
+}
+
+.trip__magnet {
+    width: 70px;
+    height: 64px;
+    position: absolute;
+    top: 104px;
+    left: 110px;
+    animation: start 3s linear 1 2s forwards;
+}
+
+@keyframes start {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    10% {
+        transform: translate(350px, 0px);
+    }
+
+    30% {
+        transform: translate(400px, 450px) rotate(-360deg);
+    }
+
+    50% {
+        transform: translate(410px, 450px) scale(1.5, 0.5);
+    }
+
+    70% {
+        transform: translate(420px, 450px) scale(0.5, 1.5);
+    }
+
+    90% {
+        transform: translate(410px, 450px) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(410px, 450px) scale(0, 0)
+    }
+}
+
+.boom {
+    width: 500px;
+    height: 405px;
+    position: absolute;
+    top: 450px;
+    left: 340px;
+    transform: scale(0, 0);
+    animation: boom 1.8s linear 4.5s;
+}
+
+@keyframes boom {
+    0% {
+        transform: scale(2, 2);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(2, 2);
+        opacity: 0;
+    }
+}
+
+.main__car {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 420px;
+    bottom: 125px;
+}
+
+.car {
+    position: relative;
+    opacity: 0;
+    animation: car 8s ease 6s forwards;
+}
+
+@keyframes car {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(800px);
+    }
+}
+
+.car__body {
+    width: 250px;
+    height: 70px;
+    border-radius: 30px 30px 0 0;
+    background: #e36f48;
+    border: 3px solid #000;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.car__bottom {
+    width: 250px;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #4d897d;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+/* Wheel */
+
+.car__wheel {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    background: #8d8352;
+    outline: 7px dashed rgb(45, 40, 40);
+    outline-offset: -7px;
+    transition: transform 0.5s;
+}
+
+.car__wheel:hover {
+    transform: rotate(360deg);
+}
+
+.car__wheel--back {
+    position: absolute;
+    left: 20px;
+    bottom: -35px;
+    animation: rotate 8s ease 1 6s forwards;
+}
+
+.car__wheel--front {
+    position: absolute;
+    left: 160px;
+    bottom: -35px;
+    animation: rotate 8s ease 1 6s forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-2160deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.car__wheel-cap {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 0, 0);
+    background: #518f82;
+}
+
+.car__wheel-cap--back {
+    position: absolute;
+    left: 43px;
+    bottom: -11px;
+}
+
+.car__wheel-cap--front {
+    position: absolute;
+    right: 44px;
+    bottom: -11px;
+}
+
+/* Lights */
+
+.car__rearlight {
+    width: 18px;
+    height: 12px;
+    background: #d7a427;
+    border-radius: 30px / 20px;
+    border: 3px solid #000;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    transform: rotate(30deg);
+}
+
+.car__rearlight::before {
+    content: "";
+    background-color: #ef393995;
+    width: 50px;
+    height: 20px;
+    border-radius: 50% / 100%;
+    position: absolute;
+    left: -40px;
+    bottom: -20px;
+    transform: rotate(-30deg);
+    opacity: 0;
+    animation: light-red 3s ease 1 7s;
+    transition: 0.3s;
+}
+
+.car__headlight {
+    width: 18px;
+    height: 12px;
+    background: #d7a427;
+    border-radius: 30px / 20px;
+    border: 3px solid #000;
+    position: absolute;
+    right: 0px;
+    bottom: 12px;
+    transform: rotate(-30deg);
+}
+
+.car__headlight::after {
+    content: "";
+    background-color: #ffffff95;
+    width: 100px;
+    height: 20px;
+    border-radius: 50% / 100%;
+    position: absolute;
+    right: -90px;
+    bottom: -30px;
+    transform: rotate(30deg);
+    opacity: 0;
+    animation: light 3s ease 1 7s;
+    transition: 0.3s;
+}
+
+.car__rearlight:hover::before,
+.car__headlight:hover::after {
+    opacity: 0.9;
+}
+
+@keyframes light-red {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes light {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Cabine */
+
+.cabine {
+    position: relative;
+}
+
+.car__cabine {
+    width: 150px;
+    height: 76px;
+    background: #e36f48;
+    border: 3px solid #000;
+    border-bottom: 6px solid #e36f48;
+    border-radius: 65px 65px 0 0;
+    position: absolute;
+    left: 53px;
+    bottom: 66px;
+}
+
+.cabine__glass {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(176deg, rgba(245, 246, 239, 1) 0%, rgba(84, 205, 157, 0.48783263305322133) 100%, rgba(0, 1, 255, 1) 100%);
+    border: 2px solid #000;
+}
+
+.cabine__glass-back {
+    border-radius: 55px 0 0 0;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+}
+
+.cabine__glass-front {
+    border-radius: 0 55px 0 0;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+}
+
+/* Boy */
+
+.boy__body {
+    width: 24px;
+    height: 22px;
+    background: #d9c090;
+    border: 2px solid black;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    position: absolute;
+    bottom: 4px;
+    left: 27px;
+}
+
+.boy__left-hand {
+    width: 15px;
+    height: 9px;
+    background: #d9c090;
+    border: 2px solid black;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+    bottom: 16px;
+    left: 15px;
+}
+
+.boy__right-hand {
+    width: 15px;
+    height: 9px;
+    background: #d9c090;
+    border: 2px solid black;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    position: absolute;
+    bottom: 16px;
+    left: 47px;
+    animation: wave-right 1s linear 2 14s;
+}
+
+@keyframes wave-right {
+    0% {
+        transform: rotate(-60deg);
+        transform-origin: top left;
+    }
+
+    15% {
+        transform: rotate(-45deg);
+        transform-origin: top left;
+    }
+
+    30% {
+        transform: rotate(-60deg);
+        transform-origin: top left;
+    }
+
+    45% {
+        transform: rotate(-45deg);
+        transform-origin: top left;
+    }
+
+    60% {
+        transform: rotate(-60deg);
+        transform-origin: top left;
+    }
+
+    80% {
+        transform: rotate(-45deg);
+        transform-origin: top left;
+    }
+
+    100% {
+        transform: rotate(-60deg);
+        transform-origin: top left;
+    }
+}
+
+.boy__head {
+    width: 15px;
+    height: 20px;
+    border-radius: 30px / 20px;
+    background: #d9c090;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 26px;
+    left: 31px;
+}
+
+.cabine:hover .boy__left-hand {
+    transform: rotate(60deg);
+    transform-origin: top right;
+}
+
+.cabine:hover .boy__right-hand {
+    transform: rotate(-60deg);
+    transform-origin: top left;
+}
+
+.man__body {
+    width: 20px;
+    height: 20px;
+    background: #1a4d4e;
+    border: 2px solid #000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    bottom: 3px;
+    right: 35px;
+}
+
+.man__hand {
+    width: 18px;
+    height: 10px;
+    border-bottom-left-radius: 5px;
+    background: #1a4d4e;
+    border: 2px solid #000;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    transform: rotate(20deg);
+    animation: rise 0.8s linear 1 14s;
+}
+
+@keyframes rise {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: top left;
+    }
+
+    50% {
+        transform: rotate(-60deg);
+        transform-origin: top left;
+    }
+
+    100% {
+        transform: rotate(-60deg);
+        transform-origin: top left;
+    }
+}
+
+.cabine:hover .man__hand {
+    transform: rotate(-60deg);
+    transform-origin: top left;
+}
+
+.man__head {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e1d38c;
+    border: 2px solid #000;
+    position: absolute;
+    bottom: 22px;
+    right: 34px;
+    transform: rotate(20deg);
+}
+
+.man__cap {
+    width: 20px;
+    height: 10px;
+    background: #d88a36;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid #000;
+    position: absolute;
+    bottom: 35px;
+    right: 31px;
+    transform: rotate(15deg);
+    animation: take-off 0.8s linear 1 14s;
+}
+
+.cabine:hover .man__cap {
+    transform: rotate(85deg);
+    transform-origin: bottom right;
+}
+
+@keyframes take-off {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: bottom right;
+    }
+
+    50% {
+        transform: rotate(85deg);
+        transform-origin: bottom right;
+    }
+
+    100% {
+        transform: rotate(85deg);
+        transform-origin: bottom right;
+    }
+}
+
+.man__visor {
+    border: 2px solid #000;
+    height: 10px;
+    position: absolute;
+    bottom: 27px;
+    right: 27px;
+    transform: rotate(110deg);
+    animation: move 0.8s linear 1 14s;
+}
+
+.cabine:hover .man__visor {
+    transform: rotate(-5deg);
+    transform-origin: bottom right;
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: bottom right;
+    }
+
+    5% {
+        transform: rotate(-5deg);
+        transform-origin: bottom right;
+    }
+
+    100% {
+        transform: rotate(-5deg);
+        transform-origin: bottom right;
+    }
+}
+
+.man__helm {
+    border: 2px solid #000;
+    height: 24px;
+    position: absolute;
+    bottom: 2px;
+    right: 22px;
+    transform: rotate(30deg);
+}
+
+.man__steering-column {
+    border: 2px solid #000;
+    height: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 14px;
+    transform: rotate(120deg);
+}
+
+/* Outline */
+
+.car__outline {
+    width: 30px;
+    height: 30px;
+}
+
+.car__patch {
+    width: 30px;
+    height: 30px;
+    background: #e36f48;
+}
+
+.car__outline--back {
+    background: #d4d2cf;
+    border-radius: 0 0 30px 0;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    position: absolute;
+    left: -27px;
+    bottom: -4px;
+}
+
+.car__patch--back {
+    position: absolute;
+    left: -27px;
+    bottom: -5px;
+}
+
+.car__outline--front {
+    background: #d4d2cf;
+    border-radius: 0 0 0 50px;
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #000;
+    position: absolute;
+    right: -27px;
+    bottom: -4px;
+}
+
+.car__patch--front {
+    position: absolute;
+    right: -27px;
+    bottom: -5px;
+}
+
+/* Gift */
+
+.cabine__gift {
+    width: 60px;
+    height: 40px;
+    background: #deab2e;
+    border: 2px solid black;
+    position: absolute;
+    top: -42px;
+    left: 44px;
+}
+
+.cabine__ribbon-x {
+    width: 60px;
+    height: 10px;
+    background: #6c833d;
+    border: 2px solid black;
+    position: absolute;
+    top: -27px;
+    left: 44px;
+}
+
+.cabine__ribbon-y {
+    width: 10px;
+    height: 40px;
+    background: #6c833d;
+    border: 2px solid black;
+    position: absolute;
+    top: -42px;
+    left: 68px;
+}
+
+.cabine__bow {
+    width: 30px;
+    height: 10px;
+    background: #6c833d;
+    clip-path: polygon(0 0%, 33% 50%, 67% 50%, 100% 0, 100% 100%, 0 100%);
+    border: 2px solid black;
+    position: absolute;
+    left: 60px;
+    top: -51px;
+}
+
+.finish-magnet {
+    width: 314px;
+    height: 297px;
+    position: absolute;
+    top: 10px;
+    left: -12px;
+    opacity: 0;
+    animation: magnet-in 1s linear 1 15s forwards;
+}
+
+@keyframes magnet-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+
+.footer {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer p {
+    text-transform: uppercase;
+    word-spacing: 5px;
+
+}
+
+.footer__link {
+    max-width: 200px;
+    background-color: darkgoldenrod;
+    border-radius: 30px;
+    padding: 8px 0;
+}
+
+.footer__link:hover {
+    background-color: rgb(212, 173, 74);
+    border-radius: 20px;
+}
