@@ -20,6 +20,8 @@ body {
 
 .header__logo {
     display: inline-block;
+    width: 100px;
+    height: 100px;
     vertical-align: middle;
     margin-right: 30%;
 }
