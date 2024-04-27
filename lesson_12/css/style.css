@@ -127,10 +127,10 @@ body {
 
 .boom {
     width: 200px;
-    height: 200px;
+    height: 205px;
     position: absolute;
     top: 450px;
-    left: 340px;
+    left: 440px;
     transform: scale(0, 0);
     animation: boom 1.8s linear 4.5s;
 }
@@ -274,13 +274,13 @@ body {
 
 .car__rearlight::before {
     content: "";
-    background-color: #ef3939;
-    width: 50px;
-    height: 20px;
-    border-radius: 50% / 100%;
+    background-color: #ef3939ad;
+    width: 5px;
+    height: 5px;
+    box-shadow: -10px 0 15px 10px #ef3939f5;
     position: absolute;
-    left: -40px;
-    bottom: -20px;
+    left: 0px;
+    bottom: -10px;
     transform: rotate(-30deg);
     opacity: 0;
     animation: light-red 3s ease 1 7s;
@@ -301,10 +301,11 @@ body {
 
 .car__headlight::after {
     content: "";
-    background-color: #e9d221;
+    background-color: #e9d221cb;
     width: 100px;
     height: 20px;
     border-radius: 50% / 100%;
+    box-shadow: 10px 0 15px 10px #e9d221b3;
     position: absolute;
     right: -90px;
     bottom: -30px;
@@ -348,14 +349,17 @@ body {
 @keyframes light {
     0% {
         opacity: 0.8;
+        box-shadow: 1px -2px 7px 5px #e9d221;
     }
 
     50% {
         opacity: 0.3;
+        box-shadow: 1px -2px 7px 5px #e9d221;
     }
 
     100% {
         opacity: 0.8;
+        box-shadow: 1px -2px 7px 5px #e9d221;
     }
 }
 
