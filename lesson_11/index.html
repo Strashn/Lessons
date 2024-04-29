@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 11</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <img class="header__logo" src="img/11.webp" alt="Лого">
+                <h1 class="header__title">Трансформації</h1>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__blocks">
+                    <div class="main__block block">
+                        <div class="block__item-1 item">
+                            translate(-50px, 20px)
+                        </div>
+                    </div>
+                    <div class="main__block block ">
+                        <div class="block__item-2 item">
+                            transform: scale(0.5, 1.2)
+                        </div>
+                    </div>
+                    <div class="main__block block">
+                        <div class="block__item-3 item">
+                            transform: scale(1.1, 0.7) <br> translate(30px, 20px)
+                        </div>
+                    </div>
+                    <div class="main__block block">
+                        <div class="block__item-4 item">
+                            transform: scale(-1, 1)
+                        </div>
+                    </div>
+                    <div class="main__block block">
+                        <div class="block__item-5 item">
+                            <p>transform: rotate(360deg)
+                        </div>
+                    </div>
+                    <div class="main__block block">
+                        <div class="block__item-6 item">
+                            transform: skew(-45deg, 30deg)
+                        </div>
+                    </div>
+                    <div class="main__block block">
+                        <div class="block__item-7 item">
+                            transform: rotate(-30deg) <br>scale(0.8) <br>translate(-20px, -20px) <br>skew(30deg,
+                            -45deg);
+                        </div>
+                    </div>
+                    <div class="main__block block block--3d">
+                        <div class="block__item-8  item">
+                            transform: rotate(-90deg);<br>
+                            transform-origin: 50% 0;
+                        </div>
+                    </div>
+                    <div class="main__block block block--3d">
+                        <div class="block__item-9 item">
+                            perspective: 300px;<br>
+                            transform: rotateX(60deg);
+
+                        </div>
+                    </div>
+                    <div class="main__block block block--3d">
+                        <div class="block__item-10 item">
+                            perspective: 300px;<br>
+                            translate3d(10px, 50px, 30px)
+                        </div>
+                    </div>
+                    <div class="main__block block block--3d">
+                        <div class="block__item-11 item">
+                            perspective: 300px;<br>
+                            transform: scale3d(1.2, 1.2, 0.8);
+                        </div>
+                    </div>
+                    <div class="main__block block block--3d">
+                        <div class="block__item-12 item">
+                            perspective: 300px;<br>
+                            transform: scale(0.5, 0.8) <br>
+                            skew(-45deg, -45deg)
+                        </div>
+                    </div>
+                    <div class="main__block block block--3d">
+                        <div class="block__item-13 item">
+                            perspective: 300px;<br>
+                            transform: translate3d(10px, 20px, 30px) <br>
+                            rotate3d(10, 30, 20, -120deg);
+                        </div>
+                    </div>
+                    <div class="main__block block block--3dp">
+                        <div class="block__item-14 item">
+                            perspective: 300px;<br>
+                            transform-style: preserve-3d;<br>
+                            transform: rotateX(60deg);
+                        </div>
+                    </div>
+                    <div class="main__block block block--flip">
+                        <div class="block__sheet"></div>
+                        <div class="block__square"> </div>
+                        <div class="block__date block__date--16april"><img src="img/16april1.webp" alt="Лист календаря">
+                        </div>
+                        <div class="block__date block__date--17april"><img src="img/17april1.webp" alt="Лист календаря">
+                        </div>
+                    </div>
+
+                    <div class="main__block block block--flip">
+                        <div class="block__circle"></div>
+                        <div class="block__square"> </div>
+                        <div class="block__img block__img--obverse"><img src="img/borsch-reverse.webp"
+                                alt="Реврс монети">
+                        </div>
+                        <div class="block__img block__img--reverse"><img src="img/borsch-obverse.webp"
+                                alt="Аверс монети">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__car car">
+
+                    <div class="car__body"></div>
+                    <div class="car__bottom"></div>
+
+                    <div class="car__wheels">
+                        <div class="car__wheel car__wheel--back"></div>
+                        <div class="car__wheel car__wheel--front"></div>
+                        <div class="car__wheel-cap car__wheel-cap--back"></div>
+                        <div class="car__wheel-cap car__wheel-cap--front"></div>
+                    </div>
+
+                    <div class="car__rearlight">
+                        <div class="car__light car__light--rear"></div>
+                    </div>
+                    <div class="car__headlight">
+                        <div class="car__light car__light--front"></div>
+                    </div>
+
+                    <div class="car__cabine cabine">
+
+                        <div class="cabine__glass cabine__glass-back"></div>
+                        <div class="cabine__glass cabine__glass-front"></div>
+
+                        <div class="cabine__boy boy">
+                            <div class="boy__head"></div>
+                            <div class="boy__left-hand"></div>
+                            <div class="boy__right-hand"></div>
+                            <div class="boy__body"></div>
+                        </div>
+
+                        <div class="cabine__man man">
+                            <div class="man__hand"></div>
+                            <div class="man__body"></div>
+                            <div class="man__head"></div>
+                            <div class="man__cap"></div>
+                            <div class="man__visor"></div>
+                            <div class="man__helm"></div>
+                            <div class="man__steering-column"></div>
+                        </div>
+
+                        <div class="car__patch car__patch--back"></div>
+                        <div class="car__outline car__outline--back"></div>
+                        <div class="car__patch car__patch--front"></div>
+                        <div class="car__outline car__outline--front"></div>
+                        <div class="car__patch car__patch--back"></div>
+                        <div class="car__outline car__outline--back"></div>
+                        <div class="car__patch car__patch--front"></div>
+                        <div class="car__outline car__outline--front"></div>
+
+                        <div class="cabine__gift">
+                            <div class="cabine__box"></div>
+                            <div class="cabine__ribbon cabine__ribbon-x"></div>
+                            <div class="cabine__bow"></div>
+                            <div class="cabine__ribbon cabine__ribbon-y"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>Kyiv Spring 2024</p>
+        <p class="footer__link">LemonLemon&copy;</p>
+    </footer>
+
+</body>
+
+</html>
