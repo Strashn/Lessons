@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 14</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <img class="header__logo" src="img/14.png" alt="Lesson 14">
+                <h1 class="header__title">Форми</h1>
+            </div>
+        </header>
+
+        <main class="page">
+            <form class="page__form" action="#" method="post">
+                <section class="page__container info">
+                    <div class="info__content">
+                        <div class="page__block block">
+                            <img src="img/icon-info.svg" alt="Icon">
+                            <h2 class="block__title">Інформація про покупця</h2>
+                        </div>
+
+                        <div class="info__body">
+                            <div class="info__column">
+                                <input class="info__input" name="form[]" placeholder="Прізвище" required
+                                    autocomplete="on">
+                                <input class="info__input" name="form[]" placeholder="Ім'я" required autocomplete="on">
+                                <input class="info__input" name="form[]" placeholder="Побатькові" required
+                                    autocomplete="on">
+                            </div>
+                            <div class="info__column">
+                                <input class="info__input" name="form[]" type="tel" placeholder="Контактний телефон"
+                                    required autocomplete="on">
+                                <input class="info__input" name="form[]" type="email" placeholder="E-mail" required
+                                    autocomplete="on">
+                            </div>
+                        </div>
+                        <div class="info__checkbox checkbox-info">
+                            <label class="checkbox-info__label" for="other">
+                                <input class="checkbox-info__input" type="checkbox" id="other">
+                                <span class="checkbox-info__text">Отримуватиме замовлення інша людина</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__container delivery">
+                    <div class="delivery__content">
+                        <div class="page__block block">
+                            <img src="img/icon-delivery.svg" alt="Icon">
+                            <h2 class="block__title">Вибір способу доставки</h2>
+                        </div>
+
+                        <div class="delivery__radio radio">
+                            <div class="radio__body">
+                                <input class="radio__input" checked required type="radio" name="delivery[]" id="pickup">
+                                <label class="radio__label" for="pickup">
+                                    <img class="radio__img" src="img/pickup.svg" alt="Вантажівка">
+                                    <span class="radio__text">Самовивіз із магазину</span>
+                                    <span class="radio__cost">Безкоштовно</span>
+                                </label>
+                            </div>
+                            <div class="radio__body">
+                                <input class="radio__input" required type="radio" name="delivery[]" id="np">
+                                <label class="radio__label" for="np">
+                                    <img class="radio__img" src="img/np.svg" alt="Лого Нової пошти">
+                                    <span class="radio__text">Доставка "Нова Пошта"</span>
+                                    <span class="radio__cost">= від 500 грн.</span>
+                                </label>
+                            </div>
+                            <div class="radio__body">
+                                <input class="radio__input" required type="radio" name="delivery[]" id="courier">
+                                <label class="radio__label" for="courier">
+                                    <img class="radio__img" src="img/courier.svg" alt="Малюнок кур'єра">
+                                    <span class="radio__text">Доставка кур'єром</span>
+                                    <span class="radio__cost">= від 200 грн.</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="delivery__row">
+                            <div class="delivery__about">
+                                <p>
+                                    Графік роботи: щодня з 9:00 до 18:00
+                                </p>
+                                <span>м. Київ, пров. Ізяславський 52, пов. 2</span>
+                            </div>
+                            <a href="#" class="button map-button" target="_blank">На мапі</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__container payment">
+                    <div class="payment__content">
+                        <div class="page__block block">
+                            <img src="img/icon-payment.svg" alt="Icon">
+                            <h2 class="block__title">Вибір способу оплати</h2>
+                        </div>
+
+                        <ul class="payment__items">
+                            <li class="payment__item">
+                                <label class="payment__label" for="cash">
+                                    <input class="payment__input" type="radio" name="payment[]" required id="cash">
+                                    <span class="payment__text">Готівкою при отриманні (Післяплата)</span>
+                                </label>
+                            </li>
+                            <li class="payment__item">
+                                <label class="payment__label" for="site">
+                                    <input class="payment__input" type="radio" name="payment[]" required checked
+                                        id="site">
+                                    <span class="payment__text">Оплата карткою на сайті</span>
+                                    <img src="img/master-card-logo.svg" alt="Лого Мастеркард">
+                                    <img src="img/visa-card-logo.svg" alt="Лого Віза">
+                                </label>
+                            </li>
+                            <li class="payment__item">
+                                <label class="payment__label" for="private">
+                                    <input class="payment__input" type="radio" name="payment[]" required id="private">
+                                    <span class="payment__text">Private Pay</span>
+                                </label>
+                            </li>
+                            <li class="payment__item">
+                                <label class="payment__label" for="krovato">
+                                    <input class="payment__input" type="radio" name="payment[]" required id="krovato">
+                                    <span class="payment__text">Кредіт від Krovato</span>
+                                    <img src="img/privat-pay.svg" alt="Лого Кредіт від Krovato">
+                                </label>
+                            </li>
+                            <li class="payment__item">
+                                <label class="payment__label" for="pb">
+                                    <input class="payment__input" type="radio" name="payment[]" required id="pb">
+                                    <span class="payment__text">Оплата частинами від ПриватБанк</span>
+                                    <img src="img/privat-part.svg" alt="Лого Оплата частинами від ПриватБанк">
+                                </label>
+                            </li>
+                            <li class="payment__item">
+                                <label class="payment__label" for="mb">
+                                    <input class="payment__input" type="radio" name="payment[]" required id="mb">
+                                    <span class="payment__text">Оплата частинами від МоноБанк</span>
+                                    <img src="img/mono-bank-logo.svg" alt="Лого Оплата частинами від МоноБанк">
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="page__container comment">
+                    <div class="comment__content">
+                        <div class="page__block block">
+                            <img src="img/icon-comment.svg" alt="Icon">
+                            <h2 class="block__title">Коментар до замовлення</h2>
+                        </div>
+                        <textarea class="comment__textarea" placeholder="Ваш коментар" name="comment[]"
+                            id="#"></textarea>
+                        <button class="to-order button" type="submit">
+                            ОФОРМИТИ ЗАМОВЛЕННЯ
+                        </button>
+                    </div>
+                </section>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <a class="footer__study" href="https://edu.fls.guru/">Kyiv Spring 2024</a>
+            <a class="footer__lemon">LemonLemon&copy;</a>
+        </footer>
+    </div>
+</body>
+
+</html>
