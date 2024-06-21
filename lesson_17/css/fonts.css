@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Integral CF';
+    src: url("../fonts/IntegralCF-Bold.woff2") format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
