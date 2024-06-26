@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 23</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <img src="img/23.png" alt="">
+                <h1>Java Script. Part Three</h1>
+            </div>
+        </header>
+        <main class="page">
+            <div class="page__container">
+                <div class="page__tasks">
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №1</h2>
+                        <div class="page__question"><span>Завдання: </span>Отримати в константу елемент
+                            &lt;body&gt;
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                               const bodyElement = document.body 
+                               console.log(bodyElement)</pre>
+                        </div>
+                    </div>
+
+                    <div class="page__task list">
+                        <h2 class="page__title">Задача №2</h2>
+                        <div class="page__question"><span>Завдання: </span>Написати функцію, яка додає в
+                            &lt;body&gt; список UL з певною кількістю LI (кількість має передаватись як параметр
+                            функції, також мати значення за замовченням)
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                                const list = document.querySelector(`.list`)
+
+                                if (list) {
+                                    const newUl = document.createElement(`ul`)
+                            
+                                    function addList(n = 6) {
+                                        for (let i = 1; i &lt; n; i++) {
+                                            const newLi = document.createElement(`li`)
+                                            newLi.textContent = `Task ${i}`
+                                            newUl.append(newLi)
+                                            console.log(newLi)
+                                        }
+                                        list.append(newUl)
+                                    }
+                                    addList(5)
+                                    addList()
+                                }
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №3</h2>
+                        <div class="page__question"><span>Завдання: </span>Додати до елементу
+                            &lt;body&gt; класс loaded.
+                            Потім перевірити чи є клас loaded у елемента
+                            &lt;body&gt; і, якщо є, додати стиль кольору тесту зелений.
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                            document.body.classList.add(`loaded`)
+                            if (document.body.classList.contains(`loaded`)) {
+                                document.body.style.color = `green`
+                            }
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №4</h2>
+                        <div class="page__question"><span>Завдання: </span>Дано в html: три елементи з класом item.
+                            Треба отримати ці елементи в константу, кожному додати клас active,
+                            та перезаписати контент всередені кожного елемента на "Елемент №(тут порядковий номер
+                            елементу починаючи з 1)".
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                                const items = document.querySelectorAll(`.item`)
+                                if(items){
+                                items.forEach((item, index) => {
+                                    item.textContent = `Елемент №${index + 1}`
+                                    item.classList.add(`active`)
+                                })
+                                }
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №5</h2>
+                        <div class="page__question"><span>Завдання: </span>Дано в html: текст, далі кнопка з класом
+                            button. Треба прокрутити скрол сторінки до кнопки
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+
+                            </pre>
+                            <div class="page__text">
+                                Чудовий Дніпро у тиху погоду, коли вільно і плавно мчить крізь ліси й гори повні води
+                                свої.
+                                Ані ворухнеться; ані прогримить. Дивишся, і не знаєш, іде чи не йде його велична
+                                широчінь, і здається, неначе увесь вилитий він із скла, і неначе блакитний дзеркальний
+                                шлях, без
+                                міри в ширину, без кінця в довжину, плине і в'ється по зеленому світу.
+                                Зеленокудрі! вони припали разом з польовими квітами до вод і, схилившися, дивляться у
+                                них і не надивляться, і не намилуються світлим зраком своїм, і посміхаються до нього, і
+                                вітають його, киваючи гіллям. В середину ж Дніпра вони не сміють глянути: ніхто, крім
+                                сонця й
+                                блакитного неба, не дивиться в нього. Мало який птах долетить до середини Дніпра.
+                            </div>
+                            <a href="#" class="button">Button</a>
+                        </div>
+                    </div>
+
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №6</h2>
+                        <div class="page__question"><span>Завдання: </span>Дано в html: посилання з класом link
+                            Треба додати до посилання дата атрибут зі значенням 100
+                            Поім отримати значення атрибуту, та, якщо значення меньше 200
+                            пофарбувати колір тексту посилання в червоний
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+
+                        </pre>
+                            <a href="#" class="link">Текст посилання</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <a class="footer__study" href="https://edu.fls.guru/">Kyiv Spring 2024</a>
+            <a class="footer__lemon">LemonLemon&copy;</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
