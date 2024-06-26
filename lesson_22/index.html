@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 22</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <img src="img/22.png" alt="">
+                <h1>Java Script. Part Two</h1>
+            </div>
+        </header>
+        <main class="page">
+            <div class="page__container">
+                <div class="page__tasks">
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №1</h2>
+                        <div class="page__question"><span>Питання: </span>Що потрапить в консоль?
+                            <pre>
+                            let someVar = 0;
+                            ++someVar;
+                            if (someVar) {
+                            console.log(someVar);
+                            }</pre>
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>1. Інкремент ++ збільшує значення на одиницю.
+                        </div>
+                    </div>
+
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №2</h2>
+                        <div class="page__question"><span>Завдання: </span>За допомогою циклу FOR виведіть в консоль 10
+                            рядків:
+                            Пункт №1
+                            Пункт №2
+                            і т.д.
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                                let stringPunkt = `Пункт №`
+                                for (let i=1; i&lt;11; ++i) {
+                                console.log(`Пункт №` + [i])
+                                }
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №3</h2>
+                        <div class="page__question"><span>Питання: </span>Що потрапить в консоль?
+                            <pre>
+                                if (2 * 20 &lt;= 10 || 30 / 2 &lt; 5 && 10 &lt;= "10" || 20 === "20") {
+                                    console.log('000');
+                                }
+                            </pre>
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            Нічого. Спочатку виконаються аріфметичны дії, потім логічні. Так як
+                            && має перевагу над ||, то перевірятимуться умови 30 / 2 &lt; 5 - false та 10 &lt;="10" -
+                            true
+                            тому, що обидва операнди приводяться до числа і ця умова виконана. Отже false || true в
+                            підсумку маємо false.
+                        </div>
+                    </div>
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №4</h2>
+                        <div class="page__question"><span>Завдання: </span>Створіть функцію, яка повертає результат
+                            ділення числа a на число b з додаванням рядка "Результат ділення: "
+                            Викличте функцію передаючі різні значення, у тому числі не передаючи зовсім.
+                            Функція не має повертати NaN, Infinite або помилку
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                                function getQuotient(a, b) {
+                                    const result = a / b
+                                    if (isNaN(result) || result === Infinity)
+                                        alarm (`Введіть коректні значення`)
+                                }
+                                return `Результат ділення: ${result}`
+
+                                console.log(getQuotient(8, 4))
+                                console.log(getQuotient(8, 0))
+                                console.log(getQuotient())
+                                console.log(getQuotient(5, `John`))
+                                console.log(getQuotient(-12, 3))
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №5</h2>
+                        <div class="page__question"><span>Завдання: </span>Створіть масив даних - 5 елементів, один
+                            з
+                            яких число 10. Обробіть масив за допомогою методу перебору.
+                            Перевіряйте елемент на відповідність числу 10, та у разі відповідності, виводьте в
+                            консоль.
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                                const tenArray = [`John`, 10, true, 10, 4]
+                                tenArray.forEach((item, index) => {
+                                if (item === 10) {
+                                console.log(item, index)
+                                }
+                                })
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №3</h2>
+                        <div class="page__question"><span>Питання: </span>Що потрапить в консоль?
+                            <pre>
+                                if (2 * 20 &lt;= 10 || 30 / 2 &lt; 5 && 10 &lt;= "10" || 20 === "20") {
+                                    console.log('000');
+                                }
+                            </pre>
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>Нічого. Спочатку виконаються аріфметичны дії, потім логічні. Так
+                            як
+                            && має перевагу над ||, то перевірятимуться умови 30 / 2 &lt; 5 - false та 10 &lt;="10" -
+                            true
+                            тому, що обидва операнди приводяться до числа і ця умова виконана. Отже false || true в
+                            підсумку маємо false.
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <a class="footer__study" href="https://edu.fls.guru/">Kyiv Spring 2024</a>
+            <a class="footer__lemon">LemonLemon&copy;</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
