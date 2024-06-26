@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+@import "_reset.scss";
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+
+    &>main {
+        flex-grow: 1;
+    }
+
+    [class*="__container"] {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .header {
+        margin-bottom: 5rem;
+        background-color: #02023e;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        & img {
+            width: 5rem;
+            height: 5rem;
+            object-fit: cover;
+            margin-right: 19rem;
+        }
+
+        & h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+    }
+
+    .page {
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            column-gap: 2rem;
+            color: #02023e;
+        }
+
+        &__tasks {
+            padding: 2rem;
+
+            &:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &__task {
+            border: 2px solid #02023e;
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+
+            &:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+
+        &__question,
+        &__units,
+        &__answer {
+            font-size: 1.25rem;
+            line-height: 1.4;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__units {
+            & li {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &__question span,
+        &__answer span {
+            font-weight: 700;
+        }
+    }
+
+    .footer {
+        margin: 0 auto;
+        text-align: center;
+        display: inline-flex;
+        flex-direction: column;
+        transition: 0.3s;
+        padding-top: 2rem;
+
+        & a {
+            text-transform: uppercase;
+            word-spacing: 5px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        &__study,
+        &__lemon:hover {
+            color: #af9c06;
+        }
+
+        &__lemon,
+        &__study:hover {
+            color: #09042b;
+        }
+    }
+}

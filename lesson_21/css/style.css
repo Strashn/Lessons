@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  border-color: transparent;
+  outline: none;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.wrapper [class*=__container] {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.wrapper .header {
+  margin-bottom: 5rem;
+  background-color: #02023e;
+}
+.wrapper .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+.wrapper .header img {
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 19rem;
+}
+.wrapper .header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.wrapper .page__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+  color: #02023e;
+}
+.wrapper .page__tasks {
+  padding: 2rem;
+}
+.wrapper .page__tasks:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.wrapper .page__task {
+  border: 2px solid #02023e;
+  border-radius: 2.5rem;
+  padding: 2.5rem;
+}
+.wrapper .page__task:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.wrapper .page__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.wrapper .page__question, .wrapper .page__units, .wrapper .page__answer {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+.wrapper .page__question:not(:last-child), .wrapper .page__units:not(:last-child), .wrapper .page__answer:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.wrapper .page__units li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.wrapper .page__question span, .wrapper .page__answer span {
+  font-weight: 700;
+}
+.wrapper .footer {
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding-top: 2rem;
+}
+.wrapper .footer a {
+  text-transform: uppercase;
+  word-spacing: 5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.wrapper .footer__study, .wrapper .footer__lemon:hover {
+  color: #af9c06;
+}
+.wrapper .footer__lemon, .wrapper .footer__study:hover {
+  color: #09042b;
+}
