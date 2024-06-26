@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+@import "_reset.scss";
+
+
+body {
+    opacity: 0;
+}
+
+.loaded {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    color: #02023e;
+
+    &>main {
+        flex-grow: 1;
+    }
+
+    [class*="__container"] {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .header {
+        margin-bottom: 5rem;
+        color: #fff;
+        background-color: #02023e;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        & img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 19rem;
+        }
+
+        & h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+    }
+
+    .page {
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            column-gap: 2rem;
+        }
+
+        &__tasks {
+            padding: 2rem;
+
+            &:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &__task {
+            border: 2px solid #02023e;
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+
+            &:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+
+        &__question,
+        &__units,
+        &__answer,
+        &__text {
+            font-size: 1.25rem;
+            line-height: 1.4;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__units {
+            & li {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &__question span,
+        &__answer span {
+            font-weight: 700;
+        }
+
+        .item {
+            display: inline-block;
+            font-size: 1.25rem;
+            margin-right: 1.5rem;
+            padding: 0.75rem 1rem;
+            color: #fff;
+            background-color: #02023e;
+            border-radius: 2rem;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #242480;
+        }
+
+        .block {
+            width: 200px;
+            height: 150px;
+            color: #fff;
+            background-color: #02023e;
+            font-size: 70px;
+            font-weight: 600;
+            text-align: center;
+            vertical-align: middle;
+            padding: 40px;
+            margin-bottom: 32px;
+            border-radius: 100px / 70px;
+            opacity: 0;
+        }
+
+        .animate {
+            transform: translate(300%, 0px);
+            opacity: 1;
+            transition: 9s;
+        }
+    }
+
+    .footer {
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        transition: 0.3s;
+        background-color: #02023e;
+
+        & a {
+            text-transform: uppercase;
+            word-spacing: 5px;
+            font-weight: 600;
+        }
+
+        &__study {
+            color: #af9c06;
+        }
+
+        &__study:hover {
+            color: #b9bf0eef;
+        }
+    }
+}

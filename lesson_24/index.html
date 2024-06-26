@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 24</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <img src="img/24.png" alt="">
+                <h1>Java Script. Part Four</h1>
+            </div>
+        </header>
+
+        <main class="page">
+            <div class="page__container">
+                <div class="page__tasks">
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №1</h2>
+                        <div class="page__question"><span>Завдання: </span>Дано в html: три елементи з класом item.
+                            При кліку на кожен з елементів додати клас active,
+                            при повторному кліку прибрати клас
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                                const list = document.querySelector(".list")
+                                list.insertAdjacentHTML("beforeend",  <code>`&lt;<span>div</span> class="item"&gt;Add Item&lt;<span>/div</span>&gt;`</code>)
+    
+                                document.addEventListener("click", docAction)
+    
+                                function docAction(e) {
+                                    const elemTarget = e.target
+                                    if (elemTarget.closest(`.item`)) {
+                                        const currentElem = elemTarget.closest(`.item`)
+                                        currentElem.classList.toggle(`active`)
+                                    }
+                                }
+                            </pre>
+                        </div>
+                        <div class="list">
+                            <div class="item">Item</div>
+                            <div class="item">Item</div>
+                            <div class="item">Item</div>
+                        </div>
+                    </div>
+
+                    <div class="page__task list">
+                        <h2 class="page__title">Задача №2</h2>
+                        <div class="page__question"><span>Завдання: </span>Дано в css/scss: body прозорий
+                            При повному завантаженню сторінки додати клас до body який прибирає прозорість.
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                                window.addEventListener("load", pageLoaded)
+                                function pageLoaded(e) {
+                                    document.body.classList.add(`loaded`)
+                                }
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №3</h2>
+                        <div class="page__question"><span>Завдання: </span>Дано в html: header main footer
+                            При наведенні курсору на header змінювати колір фону у footer.
+                            Коли курсор йде з header повертати початковий фон для footer.
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                                const header = document.querySelector(`.header`)
+                                const footer = document.querySelector(`.footer`)
+                                
+                                header.addEventListener("mouseenter", changeBgFooter)
+                                header.addEventListener("mouseleave", changeBgFooter)
+                                
+                                function changeBgFooter(e) {
+                                    if (e.type === "mouseenter") {
+                                        footer.style.backgroundColor = "#bb1111"
+                                    } else if (e.type === "mouseleave") {
+                                        footer.style.backgroundColor = "#02023e"
+                                    }
+                                }
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="page__task">
+                        <h2 class="page__title">Задача №4</h2>
+                        <div class="page__question"><span>Завдання: </span>Дано в html: текст, елемент з класом item,
+                            текст, так, що елемент з класом item за межами в'юпотрта.
+                            Створити функцію, яка будує інтервал, який буде змінювати контент в елементі item, виводячи
+                            цифру, яка збільшується на одиницю: 1 2 3 ... і т.д.
+                            Затримка між зміною числа, та до якого числа має працювати інтервал має задаватись в дата
+                            атрибутах елемента item.
+                            Функція має запускатить, коли ми доскролюємо до елементу item (його видно), і не запускатись
+                            повторно.
+                        </div>
+                        <div class="page__answer">
+                            <span>Відповідь: </span>
+                            <pre>
+                                const block = document.querySelector(".block")
+
+                                function count(block) {
+                                    const number = parseInt(block.dataset.count) || 7
+                                    const delay = parseInt(block.dataset.delay) || 1000
+                                
+                                    let count = 0
+                                    const timer = setInterval(() => {
+                                        count++
+                                        block.textContent = count
+                                        count === number ? clearInterval(timer) : null
+                                    }, delay)
+                                }
+                                
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                            block.classList.add(`animate`)
+                                            count(block)
+                                            observer.unobserve(block)
+                                        }
+                                    })
+                                }, {
+                                    threshold: 0.5
+                                })
+                                
+                                observer.observe(block)
+                            </pre>
+                        </div>
+                        <div class="page__text">
+                            Чудовий Дніпро у тиху погоду, коли вільно і плавно мчить крізь ліси й гори повні води свої.
+                            Ані ворухнеться; ані прогримить. Дивишся, і не знаєш, іде чи не йде його велична широчінь, і
+                            здається, неначе увесь вилитий він із скла, і неначе блакитний дзеркальний шлях, без міри в
+                            ширину, без кінця в довжину, плине і в'ється по зеленому світу.
+                        </div>
+                        <div class="block" data-number="8" data-delay="1000">
+
+                        </div>
+                        <div class="page__text">
+                            Зеленокудрі! вони припали разом з польовими квітами до вод і, схилившися, дивляться у них і
+                            не надивляться, і не намилуються світлим зраком своїм, і посміхаються до нього, і вітають
+                            його, киваючи гіллям. В середину ж Дніпра вони не сміють глянути: ніхто, крім сонця й
+                            блакитного неба, не дивиться в нього. Мало який птах долетить до середини Дніпра.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__links">
+                <a class="footer__study" href="https://edu.fls.guru/" target="_blank">Kyiv Spring 2024</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
