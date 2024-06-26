@@ -387,8 +387,7 @@ body {
 /* Header__bottom */
 
 .header__bottom {
-    background: #fff;
-    padding: 18px 5px;
+    opacity: 0;
 }
 
 .bottom__container {
@@ -696,7 +695,6 @@ body {
 .page__container {
     background: #f8f8f8;
     padding-top: 250px;
-    z-index: 51;
 }
 
 .page__popular {
